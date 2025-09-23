@@ -1,12 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-   <p>I have a funny bear picture here</p>
-   <img src="./images/bear.PNG" />
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title">Your Name</h1>
+      <nav class="site-nav">
+        <a href="#works">Works</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="works" class="section works-section">
+    <div class="section-inner">
+      <h2>Works</h2>
+      <div class="projects-grid">
+        <!-- Project entries -->
+        <div class="project-item">
+          <img src="images/project1.jpg" alt="Project 1 title" />
+          <div class="project-info">
+            <h3>Project Title 1</h3>
+            <p>Short description of what this project is / what you did.</p>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="images/project2.jpg" alt="Project 2 title" />
+          <div class="project-info">
+            <h3>Project Title 2</h3>
+            <p>Short description of what this project is / what you did.</p>
+          </div>
+        </div>
+        <!-- Add more as needed -->
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section about-section">
+    <div class="section-inner">
+      <h2>About</h2>
+      <img class="profile-img" src="images/profile.jpg" alt="Your Name profile photo" />
+      <p>
+        <!-- Your about text here -->
+        Hello! I am a [your role, e.g. creative developer / designer / etc.]. I build minimal, elegant web experiences. [More text]
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact-section">
+    <div class="section-inner">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+      <p>Social:
+        <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a> |
+        <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© <span id="year"></span> Your Name.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

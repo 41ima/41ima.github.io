@@ -1,0 +1,95 @@
+/* Reset some basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: rgba(255,255,255,0.9);
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.site-nav a {
+  margin-left: 1.5rem;
+  font-size: 1rem;
+}
+
+.section {
+  padding: 6rem 2rem 4rem; /* top padding to account for fixed header */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.works-section .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.project-item {
+  overflow: hidden;
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-info {
+  padding: 1rem 0;
+}
+
+.about-section .profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+}
+
+.contact-section {
+  text-align: center;
+}
+
+.site-footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #555;
+}
+
+footer p {
+  margin: 0;
+}
