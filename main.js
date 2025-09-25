@@ -1,25 +1,54 @@
-// main.js
+// Simple smooth scrolling function
+function scrollToSection(sectionId) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
 
-document.addEventListener('DOMContentLoaded', function () {
-  // Insert current year into footer
-  const yearSpan = document.getElementById('year');
-  if (yearSpan) {
-    const now = new Date();
-    yearSpan.textContent = now.getFullYear();
-  }
+// Header scroll effect
+function handleHeaderScroll() {
+    const header = document.querySelector('header');
+    const scrolled = window.scrollY > 50;
+    
+    if (scrolled) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+}
 
-  // Smooth scroll for nav links
-  const navLinks = document.querySelectorAll('.site-nav a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href').slice(1);
-      const targetEl = document.getElementById(targetId);
-      if (targetEl) {
-        targetEl.scrollIntoView({ behavior: 'smooth' });
-      }
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Add scroll event listener for header
+    window.addEventListener('scroll', handleHeaderScroll);
+    
+    // Add simple hover effects for buttons
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', function() {
+            if (this.classList.contains('bg-primary')) {
+                this.style.transform = 'scale(1.05)';
+            }
+        });
+        
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
     });
-  });
-
-  // You can add more JS here (e.g. lazy load images, simple animations)
+    
+    // Add hover effects for cards
+    const cards = document.querySelectorAll('.hover\\:border-primary\\/20, .hover\\:border-primary\\/50');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
 });
