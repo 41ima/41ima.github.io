@@ -1,0 +1,253 @@
+/* base body styling with padding and font family */
+body {
+  margin: 0;
+  padding: 70px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+}
+
+/* sticky header that stays at top when scrolling */
+header {
+  position: sticky;
+  top: 0;
+  margin-top: -50px;
+  z-index: 1000;
+}
+
+/* footer with centered content and top border */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: rgb(130, 130, 130);
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 852px;
+  width: calc(100% - 290px);
+  border-top-style: solid;
+  border-color: rgb(226, 226, 226);
+  border-width: 1px;
+}
+
+/* main heading style with normal weight */
+h1 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* secondary heading with gray color */
+h2 {
+  margin: 10px;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
+  color: rgb(130, 130, 130)
+}
+
+/* paragraph styling with consistent line height */
+p {
+  margin: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
+  line-height: 28px;
+}
+
+/* link styling without underline */
+a {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
+  text-decoration: none;
+  margin: 0;
+}
+
+/* icon styling for font awesome icons */
+i {
+  color: black;
+  margin-top: 20px;
+}
+
+/* navigation list with no bullets and white background */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+/* float list items to the left for horizontal nav */
+ul li {
+  float: left;
+}
+
+/* navigation link styling with gray color */
+ul li a {
+  display: block;
+  color: rgb(150, 150, 150);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* hover effect for navigation links */
+ul li a:hover {
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+}
+
+/* article container with flexbox column layout */
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 550px;
+  padding: 30px;
+}
+
+/* section spacing from top */
+section {
+  margin-top: 40px;
+}
+
+/* tablet and smaller desktop responsive styles */
+@media (max-width: 1024px) {
+
+  /* hero name scales with viewport width */
+  .hero-name {
+    font-size: 8vw;
+    /* scales with screen size */
+    margin-top: 80px;
+  }
+
+  /* skills heading scales with viewport */
+  .hero-skills {
+    font-size: 5vw;
+  }
+
+  /* contact title scales with viewport */
+  .ctitle {
+    font-size: 7vw;
+  }
+
+  /* connect heading scales with viewport */
+  .connect {
+    font-size: 6vw;
+  }
+
+  /* all grids become single column on tablets */
+  .grid,
+  .about,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* containers become fluid with max width */
+  .containers {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  /* article becomes fluid with max width */
+  article {
+    width: 100%;
+    max-width: 550px;
+  }
+
+  /* contact boxes stack vertically */
+  .contact-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /* contact box becomes fluid on tablets */
+  .contact-box {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  /* footer adjusts width for tablet screens */
+  footer {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 40px);
+    max-width: 100%;
+    padding: 10px 20px;
+  }
+}
+
+/* tablet navigation responsive styles */
+@media (max-width: 768px) {
+
+  /* navigation stacks vertically on tablets */
+  header ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  /* remove float from navigation items */
+  header li {
+    float: none;
+    margin: 5px 0;
+  }
+}
+
+/* mobile phone responsive styles */
+@media (max-width: 600px) {
+
+  /* hero name larger and responsive on mobile */
+  .hero-name {
+    font-size: 12vw;
+    /* smaller on phones */
+    margin-top: 40px;
+  }
+
+  /* hero text responsive, centered with padding */
+  .hero {
+    font-size: 5vw;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  /* skills heading larger on mobile screens */
+  .hero-skills {
+    font-size: 8vw;
+  }
+
+  /* contact title larger on mobile screens */
+  .ctitle {
+    font-size: 9vw;
+  }
+
+  /* footer text scales with viewport on mobile */
+  .pfooter {
+    font-size: 3vw;
+    text-align: center;
+  }
+
+  /* footer full width with minimal padding on mobile */
+  footer {
+    width: calc(100% - 20px);
+    padding: 10px;
+  }
+
+  /* reduce body padding on mobile for more screen space */
+  body {
+    padding: 20px;
+  }
+
+  /* gallery switches to single column on small mobile screens */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
