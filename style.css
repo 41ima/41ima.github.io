@@ -199,7 +199,7 @@
 
 .homepage-hero {
     /* hero background image */
-    background: url("IMG_0883.JPG") no-repeat center center;
+    background: url("/images/IMG_0883.JPG") no-repeat center center;
     background-size: cover;
     height: 800px;
     margin-top: 40px;
